@@ -40,7 +40,8 @@ class UserCard extends React.Component {
                                 <Card key={follower.id} className="userCard">
                                     <Follower
                                         login={follower.login}
-                                        avatar={follower.avatar_url}/>
+                                        avatar={follower.avatar_url}
+                                        followerURL={follower.html_url}/>
                                 </Card>
                             )
                         })}

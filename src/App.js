@@ -47,7 +47,7 @@ class App extends React.Component {
           <Toolbar className="titlebar">
             <Typography variant="h5" align="center">{this.state.name}'s GitHub Followers</Typography>
           </Toolbar>
-          {this.state.id === undefined ? <h4>Loading...</h4> : <UserCard className="userCard" name={this.state.name} followers={this.state.followers}/>}
+          {this.state.id === undefined ? <h4>Loading...</h4> : <UserCard className="userCard" name={this.state.name} followers={this.state.followers} />}
         </Container>
       </>
     )
