@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.titlebar {
+  background-color: #282c34;
+  color: white;
+  margin-top: 20px;
+}
+
+.userCard {
+  margin: 10px;
+  padding: 10px;
+  max-height: 250px;
+  max-width: 200px;
+}
+
+.userImage {
+  /* object-fit: contain; */
+  overflow: hidden;
+  object-fit: scale-down;
+  max-width: 75%;
+}

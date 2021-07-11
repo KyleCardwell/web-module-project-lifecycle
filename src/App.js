@@ -1,14 +1,16 @@
 import './App.css';
 import React from 'react';
-import Card from './Components/Card'
+import UserCard from './Components/UserCard'
 import axios from 'axios';
+import { Container, Typography, Card, AppBar, Toolbar, CardActions, CardContent, CardMedia, CssBaseline, Grid } from '@material-ui/core'
+import { withStyles, makeStyles } from '@material-ui/core/styles'
+
 
 class App extends React.Component {
 
   state = ({
 
   })
-
 
   componentDidMount() {
 
@@ -33,9 +35,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.id === undefined ? <h3>Loading...</h3> : <Card name={this.state.name} followers={this.state.followers}/>}
-      </div>
+
+      <>
+        <CssBaseline />
+        <AppBar position="relative">
+          <Toolbar>
+            <Typography variant="h4" align="center">Lifecycle Components with GitHub</Typography>
+          </Toolbar>  
+        </AppBar>      
+        <Container component='div' maxWidth="sm">
+          <Toolbar className="titlebar">
+            <Typography variant="h5" align="center">{this.state.name}'s GitHub Followers</Typography>
+          </Toolbar>
+          {this.state.id === undefined ? <h4>Loading...</h4> : <UserCard className="userCard" name={this.state.name} followers={this.state.followers}/>}
+        </Container>
+      </>
     )
   }
 }
