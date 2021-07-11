@@ -8,7 +8,7 @@ class Follower extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="follower">
                 <h3>{this.props.login}</h3>
                 <img src={`${this.props.avatar}`} alt="" className="userImage"/>
             </div> 
